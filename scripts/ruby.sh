@@ -42,15 +42,15 @@ echo ">>> Installing Rails"
     if [[ $RAILS_VERSION =~ "latest" ]]; then
         echo ">>> Installing latest version Ruby on Rails"
 
-        gem install rails
+        gem install rails --no-ri --no-rdoc
     else
         echo ">>> Installing specified version of Ruby on Rails: $RAILS_VERSION"
 
-        gem install rails -v $RAILS_VERSION
+        gem install rails -v $RAILS_VERSION --no-ri --no-rdoc
     fi
 
- echo ">>> Adding alias 'ras' to run rails server on 0.0.0.0 " 
- 
+ echo ">>> Adding alias 'ras' to run rails server on 0.0.0.0 "
+
     echo "alias ras='rails s -b 0.0.0.0'" >> /home/vagrant/.bashrc
 
     . /home/vagrant/.bashrc

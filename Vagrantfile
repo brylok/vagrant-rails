@@ -2,7 +2,7 @@
 # Configuration #
 #################
 
-script_url = "https://raw.githubusercontent.com/jeremymichel/vagrant-rails/master/scripts"
+script_url          = "https://raw.githubusercontent.com/jeremymichel/vagrant-rails/master/scripts"
 
 static_ip           = "192.168.33.10"
 guest_port          = 3000
