@@ -8,15 +8,13 @@ Vagrant Rails aims at simplifying the setup of Vagrant virtual machine using she
 
   **curl**
   ```bash
-  $ curl -L http://bit.ly/... > Vagrantfile
+  $ curl -L http://bit.ly/vagrantrails > Vagrantfile
   ```
-  
   **wget**
   ```bash
-  $ wget -O Vagrantfile http://bit.ly/...
+  $ wget -O Vagrantfile http://bit.ly/vagrantrails
   ```
-  **Direct Download**
-  http://bit.ly/...
+  **Direct Download:** http://bit.ly/vagrantrails
 
 * Configure the Vagrantfile
 
