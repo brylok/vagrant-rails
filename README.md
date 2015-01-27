@@ -1,6 +1,6 @@
 # Vagrant Rails
 
-Vagrant Rails aims at simplifying the setup of Vagrant virtual machine using shell provisioning and configuration.
+Vagrant Rails aims at simplifying the setup of Vagrant virtual machine for rails development, using shell provisioning and configuration.
 
 ## Instructions
 
@@ -31,3 +31,6 @@ Vagrant Rails aims at simplifying the setup of Vagrant virtual machine using she
 ## Notes
 
 The ruby installation offers a bash alias 'ras' to run rails server with binding to 0.0.0.0 .
+```bash
+$ ras # => rails server -b 0.0.0.0
+```
