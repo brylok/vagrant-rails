@@ -45,6 +45,6 @@ Vagrant.configure("2") do |config|
   # config.vm.provision :shell, path: "#{script_url}/mongodb.sh"
 
   # Node.js
-  # config.vm.provision :shell, path: "#{script_url}/node.sh", privileged: false
+  config.vm.provision :shell, path: "#{script_url}/node.sh", privileged: false
 
 end
