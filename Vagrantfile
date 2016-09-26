@@ -2,11 +2,11 @@
 # Configuration #
 #################
 
-script_url          = "https://raw.githubusercontent.com/jeremymichel/vagrant-rails/master/scripts"
+script_url          = "https://raw.githubusercontent.com/brylok/vagrant-rails/master/scripts"
 
 static_ip           = "192.168.33.10"
-guest_port          = 3000
-host_port           = 3000
+guest_port          = 8187
+host_port           = 8187
 
 ruby_version        = "latest" # use RVM version naming
 rails_version       = "latest" # use Gem version naming
@@ -23,7 +23,7 @@ Vagrant.configure("2") do |config|
   config.vm.network "forwarded_port", guest: guest_port, host: host_port
 
   # Sync folders
-  config.vm.synced_folder ".", "/vagrant"
+  config.vm.synced_folder ".", "/emptyset"
 
 ###################################################
 # Setup Provisioning, uncomment a line to install #
@@ -39,12 +39,12 @@ Vagrant.configure("2") do |config|
   config.vm.provision :shell, path: "#{script_url}/sqlite.sh"
 
   # MySQL
-  # config.vm.provision :shell, path: "#{script_url}/mysql.sh", args: [mysql_root_password]
+  config.vm.provision :shell, path: "#{script_url}/mysql.sh", args: [mysql_root_password]
 
   # MongoDB
   # config.vm.provision :shell, path: "#{script_url}/mongodb.sh"
 
   # Node.js
-  config.vm.provision :shell, path: "#{script_url}/node.sh", privileged: false
+  # config.vm.provision :shell, path: "#{script_url}/node.sh", privileged: false
 
 end
