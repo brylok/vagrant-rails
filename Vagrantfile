@@ -5,8 +5,8 @@
 script_url          = "https://raw.githubusercontent.com/brylok/vagrant-rails/master/scripts"
 
 static_ip           = "192.168.33.10"
-guest_port          = 8187
-host_port           = 8187
+guest_port          = 3000
+host_port           = 3000
 
 ruby_version        = "latest" # use RVM version naming
 rails_version       = "latest" # use Gem version naming
@@ -24,6 +24,11 @@ Vagrant.configure("2") do |config|
 
   # Sync folders
   config.vm.synced_folder ".", "/emptyset"
+
+  # Configure VM Ram usage
+  config.vm.provider "virtualbox" do |vb|
+    vb.customize ["modifyvm", :id, "--memory", "4096"]
+  end
 
 ###################################################
 # Setup Provisioning, uncomment a line to install #
@@ -45,6 +50,6 @@ Vagrant.configure("2") do |config|
   # config.vm.provision :shell, path: "#{script_url}/mongodb.sh"
 
   # Node.js
-  # config.vm.provision :shell, path: "#{script_url}/node.sh", privileged: false
+  config.vm.provision :shell, path: "#{script_url}/node.sh", privileged: false
 
 end
