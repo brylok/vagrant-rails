@@ -6,7 +6,7 @@ script_url          = "https://raw.githubusercontent.com/brylok/vagrant-rails/ma
 
 static_ip           = "192.168.33.10"
 guest_port          = 3000
-host_port           = 3000
+host_port           = 8187
 
 ruby_version        = "latest" # use RVM version naming
 rails_version       = "latest" # use Gem version naming
